@@ -91,7 +91,7 @@ namespace TurnBased_Fighting_Game
             command.ExecuteNonQuery();
         }
 
-        public void LoadBoard() // передать в метод форму с таблицей лидеров
+        public void LoadBoard(Leaders board) // передать в метод форму с таблицей лидеров
         {
             string query = "SELECT Leader, Points FROM LeaderBoard ORDER BY Points DESC";
 
@@ -110,8 +110,8 @@ namespace TurnBased_Fighting_Game
             }
             reader.Close();
             myConnection.Close();
-            //foreach (string[] s in dates)
-                //board.table.Rows.Add(s);
+            foreach (string[] s in dates)
+                board.table.Rows.Add(s);
         }
 
         private void name_KeyDown(object sender, KeyEventArgs e)
