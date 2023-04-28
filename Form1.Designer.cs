@@ -28,11 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.name = new System.Windows.Forms.TextBox();
+            this.startButton = new System.Windows.Forms.Button();
+            this.leadersButton = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -59,51 +62,57 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Введите имя персонажа";
             // 
-            // textBox1
+            // name
             // 
-            this.textBox1.BackColor = System.Drawing.Color.Black;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("MV Boli", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.textBox1.Location = new System.Drawing.Point(164, 186);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(212, 43);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.Text = "ddsfdsfds";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.name.BackColor = System.Drawing.Color.Black;
+            this.name.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.name.Font = new System.Drawing.Font("MV Boli", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.name.Location = new System.Drawing.Point(164, 186);
+            this.name.MaxLength = 9;
+            this.name.Multiline = true;
+            this.name.Name = "name";
+            this.name.Size = new System.Drawing.Size(212, 43);
+            this.name.TabIndex = 1;
+            this.name.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.name.KeyDown += new System.Windows.Forms.KeyEventHandler(this.name_KeyDown);
             // 
-            // button1
+            // startButton
             // 
-            this.button1.BackColor = System.Drawing.Color.Black;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Blue;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("MV Boli", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.button1.Location = new System.Drawing.Point(190, 244);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(157, 52);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Start";
-            this.button1.UseVisualStyleBackColor = false;
+            this.startButton.BackColor = System.Drawing.Color.Black;
+            this.startButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.startButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Blue;
+            this.startButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.startButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.startButton.Font = new System.Drawing.Font("MV Boli", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.startButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.startButton.Location = new System.Drawing.Point(190, 244);
+            this.startButton.Name = "startButton";
+            this.startButton.Size = new System.Drawing.Size(157, 52);
+            this.startButton.TabIndex = 2;
+            this.startButton.Text = "Start";
+            this.startButton.UseVisualStyleBackColor = false;
+            this.startButton.Click += new System.EventHandler(this.Sign_Click);
             // 
-            // button2
+            // leadersButton
             // 
-            this.button2.BackColor = System.Drawing.Color.Black;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Blue;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("MV Boli", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.button2.Location = new System.Drawing.Point(190, 311);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(157, 52);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Leaders";
-            this.button2.UseVisualStyleBackColor = false;
+            this.leadersButton.BackColor = System.Drawing.Color.Black;
+            this.leadersButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.leadersButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Blue;
+            this.leadersButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.leadersButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.leadersButton.Font = new System.Drawing.Font("MV Boli", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.leadersButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.leadersButton.Location = new System.Drawing.Point(190, 311);
+            this.leadersButton.Name = "leadersButton";
+            this.leadersButton.Size = new System.Drawing.Size(157, 52);
+            this.leadersButton.TabIndex = 2;
+            this.leadersButton.Text = "Leaders";
+            this.leadersButton.UseVisualStyleBackColor = false;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // Form1
             // 
@@ -112,13 +121,15 @@
             this.BackgroundImage = global::TurnBased_Fighting_Game.Properties.Resources.BackForRegistration_2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(539, 438);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.leadersButton);
+            this.Controls.Add(this.startButton);
+            this.Controls.Add(this.name);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -128,9 +139,10 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox name;
+        private System.Windows.Forms.Button startButton;
+        private System.Windows.Forms.Button leadersButton;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
 
