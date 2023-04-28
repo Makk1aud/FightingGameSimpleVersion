@@ -109,6 +109,7 @@
             this.leadersButton.TabIndex = 2;
             this.leadersButton.Text = "Leaders";
             this.leadersButton.UseVisualStyleBackColor = false;
+            this.leadersButton.Click += new System.EventHandler(this.leadersButton_Click);
             // 
             // errorProvider1
             // 

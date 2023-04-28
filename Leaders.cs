@@ -17,7 +17,7 @@ namespace TurnBased_Fighting_Game
             InitializeComponent();
         }
 
-        private void Board_Load(object sender, EventArgs e)
+        private void Leaders_Load(object sender, EventArgs e)
         {
             Form1 form1 = new Form1();
             form1.LoadBoard(this);

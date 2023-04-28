@@ -55,7 +55,7 @@ namespace TurnBased_Fighting_Game
                         {
                             query = $"UPDATE LeaderBoard Set Points = 0 WHERE Leader = '{name.Text}'";
                             //Передать в форму драки имя игрока и свернуть форму
-                            Hide();
+                            //Hide();
                         }
                         sign = false;
                     }
@@ -120,6 +120,12 @@ namespace TurnBased_Fighting_Game
             {
                 Sign_Click(sender, e);
             }
+        }
+
+        private void leadersButton_Click(object sender, EventArgs e)
+        {
+            Leaders leaders = new Leaders();
+            leaders.ShowDialog();
         }
     }
 }
