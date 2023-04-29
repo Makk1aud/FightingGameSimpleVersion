@@ -69,7 +69,7 @@ namespace TurnBased_Fighting_Game
             result = MessageBox.Show($"Ура {winner} победил",
                     "Winner", MessageBoxButtons.OK);
             totalpoints = 200 + (playerHealth.Value * 20) + (AIHealth.Value * 3);
-            HistoryOfFight($"Победил {nameOfPlayer}! Ваши очки: {totalpoints}");
+            HistoryOfFight($"{nameOfPlayer}! Ваши очки: {totalpoints}");
             return result;
         }
         public void WinnerIs()
