@@ -39,6 +39,7 @@ namespace TurnBased_Fighting_Game
 
         private void Sign_Click(object sender, EventArgs e)
         {
+            Fight fight = new Fight();
             string query = $"SELECT Leader FROM LeaderBoard";
             OleDbCommand command = new OleDbCommand(query, myConnection);
             OleDbDataReader reader = command.ExecuteReader();
@@ -54,8 +55,9 @@ namespace TurnBased_Fighting_Game
                         if (NameOccupied())
                         {
                             query = $"UPDATE LeaderBoard Set Points = 0 WHERE Leader = '{name.Text}'";
-                            //Передать в форму драки имя игрока и свернуть форму
-                            //Hide();
+                            fight.namePlayer = name.Text;
+                            fight.Show();
+                            Hide();
                         }
                         sign = false;
                     }
@@ -68,9 +70,11 @@ namespace TurnBased_Fighting_Game
                 {
                     errorProvider1.Clear();
                     query = $"INSERT INTO LeaderBoard(Leader) Values('{name.Text}')";
+                    fight.namePlayer = name.Text;
                     command.CommandText = query;
                     command.ExecuteNonQuery();
-                    // передать имя игрока и свернуть форму
+                    fight.Show();
+                    Hide();
                 }
             }
         }
