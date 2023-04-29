@@ -55,7 +55,7 @@ namespace TurnBased_Fighting_Game
                         if (NameOccupied())
                         {
                             query = $"UPDATE LeaderBoard Set Points = 0 WHERE Leader = '{name.Text}'";
-                            fight.namePlayer = name.Text;
+                            fight.nameOfPlayer = name.Text;
                             fight.Show();
                             Hide();
                         }
@@ -70,7 +70,7 @@ namespace TurnBased_Fighting_Game
                 {
                     errorProvider1.Clear();
                     query = $"INSERT INTO LeaderBoard(Leader) Values('{name.Text}')";
-                    fight.namePlayer = name.Text;
+                    fight.nameOfPlayer = name.Text;
                     command.CommandText = query;
                     command.ExecuteNonQuery();
                     fight.Show();
