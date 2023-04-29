@@ -104,5 +104,11 @@
   <ItemGroup>
     <None Include="Assets\BG\BackForRegistration_2.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sprites\StartButton.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sprites\StartButton_2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

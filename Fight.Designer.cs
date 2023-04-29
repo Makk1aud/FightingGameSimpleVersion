@@ -313,9 +313,11 @@
             // startPicture
             // 
             this.startPicture.BackColor = System.Drawing.Color.Transparent;
-            this.startPicture.Location = new System.Drawing.Point(301, 380);
+            this.startPicture.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.startPicture.Image = global::TurnBased_Fighting_Game.Properties.Resources.StartButton_2;
+            this.startPicture.Location = new System.Drawing.Point(285, 380);
             this.startPicture.Name = "startPicture";
-            this.startPicture.Size = new System.Drawing.Size(81, 63);
+            this.startPicture.Size = new System.Drawing.Size(130, 83);
             this.startPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.startPicture.TabIndex = 22;
             this.startPicture.TabStop = false;

@@ -33,10 +33,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.table = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
             this.Position = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NameOfPlayer = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Points = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.table)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,20 +60,8 @@
             this.table.GridColor = System.Drawing.Color.DarkGoldenrod;
             this.table.Location = new System.Drawing.Point(91, 101);
             this.table.Name = "table";
-            this.table.Size = new System.Drawing.Size(325, 260);
+            this.table.Size = new System.Drawing.Size(329, 260);
             this.table.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("MV Boli", 27.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.label2.Location = new System.Drawing.Point(178, 32);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(149, 49);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Leaders";
             // 
             // Position
             // 
@@ -112,6 +100,18 @@
             this.Points.Name = "Points";
             this.Points.ReadOnly = true;
             this.Points.Width = 80;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("MV Boli", 27.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.label2.Location = new System.Drawing.Point(178, 32);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(149, 49);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Leaders";
             // 
             // Leaders
             // 
