@@ -110,5 +110,10 @@
   <ItemGroup>
     <None Include="Assets\Sprites\StartButton_2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data\LeaderBoard.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
